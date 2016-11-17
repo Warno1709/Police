@@ -1,0 +1,985 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/16/2016 4:38:17 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="KG_TRAINING21"
+  DTS:CreatorName="KG_Training21\Student21"
+  DTS:DTSID="{8C5F700B-7BCE-4E1C-ACE9-34A211E8C357}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.5000.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="CrimeLoad"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{F0090BD1-ADBF-4198-B184-765E163F1D08}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFCM Police]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{52E0F24A-D4A6-4B67-A90D-8A7729F99C6E}"
+      DTS:ObjectName="FFCM Police">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::Variable]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime ID"
+              DTS:DTSID="{DDBD2761-F493-4C48-9097-FE766B797F53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{3DC1C17F-AEEB-485D-AD9A-628E931A74B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Reported by"
+              DTS:DTSID="{28603A64-7FE3-4616-A68C-A6DAD4AABA65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Falls within"
+              DTS:DTSID="{78CDB249-BCDB-4652-80F7-7C66AAEDF78B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{36AE63D1-29FE-4F55-8EB8-F0FF92BE8845}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{973CD233-397E-49A6-AF08-8A3CFE0DB99C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{DE22F42A-4175-4585-8ECB-57226E4BAF54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA code"
+              DTS:DTSID="{5178D3B8-4981-42F6-971F-85A903A44596}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LSOA name"
+              DTS:DTSID="{5FEAB6D5-CFFC-4B5D-AE5A-F4A3F7E7F967}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Crime type"
+              DTS:DTSID="{E9FE79F6-F5C2-44A2-BC27-4109A80CC224}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last outcome category"
+              DTS:DTSID="{65F67B5B-A1D1-401D-946F-2A5BF9644DF4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Context"
+              DTS:DTSID="{C80B7E07-6571-4D8E-ABCE-77F0A29D58EE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[KG_TRAINING21\KUBRICK.Police]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{39973CF9-22C9-482B-998B-B25804DA3205}"
+      DTS:ObjectName="KG_TRAINING21\KUBRICK.Police">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=KG_TRAINING21\KUBRICK;Initial Catalog=Police;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8E755193-7540-4E45-8247-EA51A303BA3D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Variable">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{3758373D-D4CC-4A12-B343-861C6C6E55EE}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{221B4DB3-6863-4036-A96D-498D4C7FE3D4}"
+        DTS:ObjectName="{221B4DB3-6863-4036-A96D-498D4C7FE3D4}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Data\Police\Crime" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="-1" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\DFT Crime"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{287DE4CA-F9CB-459F-A13A-D62ED3A90667}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT Crime"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\DFT Crime\Crime"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Crime"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Crime]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\DFT Crime\Crime.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[KG_TRAINING21\KUBRICK.Police]"
+                      connectionManagerRefId="Package.ConnectionManagers[KG_TRAINING21\KUBRICK.Police]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Crime ID]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Crime ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Crime ID]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Month]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Month"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Month]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Reported by]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Reported by"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Reported by]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Reported by]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Falls within]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Falls within"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Falls within]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Falls within]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Longitude"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Longitude]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Latitude"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Latitude]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Location]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Location"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Location]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[LSOA code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="LSOA code"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[LSOA code]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA code]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[LSOA name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="LSOA name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[LSOA name]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Crime type]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Crime type"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Crime type]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime type]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Last outcome category]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Last outcome category"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Last outcome category]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Last outcome category]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].Columns[Context]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="500"
+                          cachedName="Context"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Context]"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Context]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Crime ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Crime ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Reported by]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Reported by" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Falls within]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Falls within" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Longitude" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Latitude" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[LSOA code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="LSOA code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[LSOA name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="LSOA name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Crime type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Crime type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Last outcome category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Last outcome category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input].ExternalColumns[Context]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Context" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Crime\Crime.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\DFT Crime\FFS Crime"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="2057"
+                  name="FFS Crime"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[FFCM Police]"
+                      connectionManagerRefId="Package.ConnectionManagers[FFCM Police]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime ID]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Crime ID]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime ID]"
+                          name="Crime ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Month]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Reported by]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Reported by]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Reported by]"
+                          name="Reported by"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Falls within]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Falls within]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Falls within]"
+                          name="Falls within"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Longitude]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Longitude]"
+                          name="Longitude"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Latitude]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Latitude]"
+                          name="Latitude"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Location]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Location]"
+                          name="Location"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[LSOA code]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA code]"
+                          name="LSOA code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[LSOA name]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[LSOA name]"
+                          name="LSOA name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime type]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Crime type]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Crime type]"
+                          name="Crime type"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Last outcome category]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Last outcome category]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Last outcome category]"
+                          name="Last outcome category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Context]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Context]"
+                          length="500"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].Columns[Context]"
+                          name="Context"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Crime ID]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Crime ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Reported by]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Reported by" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Falls within]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Falls within" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Longitude" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Latitude" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Location" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[LSOA code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="LSOA code" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[LSOA name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="LSOA name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Crime type]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Crime type" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Last outcome category]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Last outcome category" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output].ExternalColumns[Context]"
+                          codePage="1252"
+                          dataType="str"
+                          length="500"
+                          name="Context" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\DFT Crime.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\DFT Crime\Crime.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\DFT Crime\FFS Crime.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F9D41D6C-0CEB-4B91-989B-D0F9D75F69D7}"
+          DTS:ObjectName="{F9D41D6C-0CEB-4B91-989B-D0F9D75F69D7}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::Variable" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Foreach Loop Container\DFT Crime"
+          TopLeft="45,9" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,106"
+          Size="216,149"
+          Id="Package\Foreach Loop Container"
+          TopLeft="275,162" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\DFT Crime">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Foreach Loop Container\DFT Crime\FFS Crime"
+          TopLeft="569.5,66.5" />
+        <NodeLayout
+          Size="108,42"
+          Id="Package\Foreach Loop Container\DFT Crime\Crime"
+          TopLeft="576,213" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\DFT Crime.Paths[Flat File Source Output]"
+          TopLeft="632,108.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,104.5"
+              Start="0,0"
+              End="0,97">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,97" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\DFT Crime\Crime">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
